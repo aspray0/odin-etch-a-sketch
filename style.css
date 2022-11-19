@@ -4,3 +4,12 @@
   margin: 0px;
   padding: 0px;
 }
+
+#container { /* Set container to have 960px width */
+  display: flex;
+  flex: 0 0 960px;
+}
+
+div { /* Set border w/ color for development purposes */
+  border: 4px black solid;
+}
