@@ -1,15 +1,16 @@
 // script.js
 
-// make the grid default to 16x16
+let num = 16;// make the grid default to 16x16
 
-// store container div inside container variable
+const container = document.querySelector('#container'); // store container div inside container variable
 
-// make a function called makeDivs with num as a parameter
-// that runs num times
-// and makes a vert div each time
-// adds class vert to each div
-//  within that div, run another loop num times
-//  that makes a horizontal div each time
-//  adds hori class to each div
-//  and appends those divs to the vert div
-// and appends that div to container
+function makeDivs(num) { // make a function called makeDivs with num as a parameter
+  for (let i = 0; i < num; i++) { // that runs num times
+    let vertDiv = document.createElement('div');// and makes a vert div each time
+    for (let j = 0; j < num; j++) { //  within that div, run another loop num times
+      let horiDiv = document.createElement('div');//  that makes a horizontal div each time
+      vertDiv.appendChild(horiDiv);//  and appends those divs to the vert div
+    }
+    container.appendChild(vertDiv);// and appends that div to container
+  }
+}
