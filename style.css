@@ -1,12 +1,16 @@
 /* style.css */
 
 * {
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
 
-#container { /* Set container to have 960px width */
+body { /* Apply flex to body to treat container as flex item */
   display: flex;
+}
+
+#container { /* Set container to have 960px width */
   flex: 0 0 960px;
 }
 
