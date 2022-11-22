@@ -26,3 +26,7 @@ body { /* Apply flex to body to treat container as flex item */
   flex: 1 0 auto;
   align-self: stretch;
 }
+
+button {
+  align-self: center;
+}
