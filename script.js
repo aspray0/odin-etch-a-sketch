@@ -11,15 +11,14 @@ function makeDivs(num) { // make a function called makeDivs with num as a parame
     for (let j = 0; j < num; j++) { //  within that div, run another loop num times
       let horiDiv = document.createElement('div'); //  that makes a horizontal div each time
       horiDiv.classList.add('hori'); // add class hori to horiDiv
+      horiDiv.addEventListener('mouseenter', () => { // add an eventListener for mouse entry that runs a function
+        horiDiv.style.cssText = 'background: black;';// that changes that div's bg color to black
+      });
       vertDiv.appendChild(horiDiv); //  and appends those divs to the vert div
     }
     container.appendChild(vertDiv); // and appends that div to container
   }
 }
 
-// select hori divs
-// for each div in divs
-// add an eventListener for mouse entry that runs a function
-// that changes that div's bg color to black
 
 makeDivs(num);
