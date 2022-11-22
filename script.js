@@ -3,7 +3,7 @@
 let num = 16; // make the grid default to 16x16
 
 function resetGrid() { // make function resetGrid
-  num = Number(prompt('Please enter the number of rows and columns for the new grid.'));// which prompts the user for a number between 1 and 100
+  num = Number(prompt('Please enter a number >=1 and <=100 for the rows and columns of the new grid.'));// which prompts the user for a number between 1 and 100
   if (!((num >= 1) && (num <= 100))) { // if entry is not a number between 1 and 100
     alert('Please enter a number greater than or equal to 1 and less than or equal to 100.'); // alert that number needs to be between 1 and 100
   } else { // else
@@ -28,6 +28,11 @@ function makeDivs(num) { // make a function called makeDivs with num as a parame
       let horiDiv = document.createElement('div'); //  that makes a horizontal div each time
       horiDiv.classList.add('hori'); // add class hori to horiDiv
       horiDiv.addEventListener('mouseenter', () => { // add an eventListener for mouse entry that runs a function
+        // make variable for random value for red color
+        // make variable for random value for green color
+        // make variable for random value for blue color
+        // initialize black variable
+        // change div's color to random color, but 10% darker with each pass
         horiDiv.style.cssText = 'background: black;';// that changes that div's bg color to black
       });
       vertDiv.appendChild(horiDiv); //  and appends those divs to the vert div
