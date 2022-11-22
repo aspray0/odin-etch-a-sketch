@@ -27,13 +27,13 @@ function makeDivs(num) { // make a function called makeDivs with num as a parame
     for (let j = 0; j < num; j++) { //  within that div, run another loop num times
       let horiDiv = document.createElement('div'); //  that makes a horizontal div each time
       horiDiv.classList.add('hori'); // add class hori to horiDiv
+      let black = 0; // initialize black variable
       horiDiv.addEventListener('mouseenter', () => { // add an eventListener for mouse entry that runs a function
-        // make variable for random value for red color
-        // make variable for random value for green color
-        // make variable for random value for blue color
-        // initialize black variable
-        // change div's color to random color, but 10% darker with each pass
-        horiDiv.style.cssText = 'background: black;';// that changes that div's bg color to black
+        let red = Math.floor(Math.random() * 256); // make variable for random value for red color
+        let green = Math.floor(Math.random() * 256); // make variable for random value for green color
+        let blue = Math.floor(Math.random() * 256); // make variable for random value for blue color
+        black += 25.5; // increase by 10% of 255 for each mouseenter event
+        horiDiv.style.cssText = `background: rgb(${red - black}, ${green - black}, ${blue - black})`; // change div's color to random color, but 10% darker with each pass
       });
       vertDiv.appendChild(horiDiv); //  and appends those divs to the vert div
     }
