@@ -16,3 +16,10 @@ function makeDivs(num) { // make a function called makeDivs with num as a parame
     container.appendChild(vertDiv); // and appends that div to container
   }
 }
+
+// select hori divs
+// for each div in divs
+// add an eventListener for mouse entry that runs a function
+// that changes that div's bg color to black
+
+makeDivs(num);
